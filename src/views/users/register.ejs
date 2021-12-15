@@ -1,0 +1,92 @@
+<%- include('../partials/head')%>
+
+    <body class="body-LR">
+        <!----------------------------------------------------->
+        <%- include('../partials/header')%>
+            <!------------------------------------------------------->
+
+            <main class="main-LR">
+
+                <div class="contenedor__todo">
+                    <div class="caja__trasera">
+
+                        <div class="caja__trasera-login">
+                            <h3>¿Ya tienes una cuenta?</h3>
+                            <p>Inicia sesión para entrar en la página.</p>
+                            <button id="btn__iniciar-sesion">Iniciar sesión</button>
+                        </div>
+
+                        <div class="caja__trasera-register">
+                            <h3>¿Aún no tienes una cuenta?</h3>
+                            <p>Regístrate para que puedas iniciar sesión.</p>
+                            <button id="btn__registrarse">Regístrarse</button>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de login y registro -->
+
+                    <div class="contenedor__login-register">
+                        <!-- Login -->
+                        <form action="/user/login" method="POST" class="form__login">
+                            <h2>Iniciar sesión</h2>
+                            <div>
+                                <input type="e-mail" placeholder="Ingrese su correo o nombre de ususario" name="emailLog">
+                                <% if (locals.errors && errors.emailLog) { %>
+                                    <small class="text-validation"><%= errors.emailLog.msg %> </small>
+                                    <% } %>
+                            </div>
+                            <div>
+                                <input type="password" placeholder="Contraseña" name="passLog">
+                                <% if (locals.errors && errors.passLog) { %>
+                                    <small class="text-validation"><%= errors.passLog.msg %> </small>
+                                    <% } %>
+                            </div>
+                            <div class="form-ad-input_check">
+                                <input type="checkbox" name="remember" id="check">
+                                <label for="check">Recordar tu ususario</label>
+                            </div>
+
+                            <button>Iniciar sesión</button>
+
+                        </form>
+
+                        <!-- Register -->
+                        <form action="/user/register" method="POST" enctype="multipart/form-data" class="form__register">
+                            <h2>Regístrarse</h2>
+                            <input type="text" name="first_name" placeholder="Nombre" value="<%= locals.old && old.first_name %>">
+                            <% if (locals.errors && errors.first_name) { %>
+                                <small class="text-validation"><%- errors.first_name.msg %></small>
+                                <% } %>
+
+                                    <input type="text" name="last_name" placeholder="Apellido" value="<%= locals.old && old.last_name %>">
+                                    <% if (locals.errors && errors.last_name) { %>
+                                        <small class="text-validation"><%= errors.last_name.msg %></small>
+                                        <% } %>
+
+                                            <input type="email" name="email" placeholder="Correo electrónico">
+                                            <% if (locals.errors && errors.email) { %>
+                                                <small class="text-validation"><%= errors.email.msg %></small>
+                                                <% } %>
+
+                                                    <input type="password" name="password1" placeholder="Contraseña">
+                                                    <% if (locals.errors && errors.password1) { %>
+                                                        <small class="text-validation"><%= errors.password1.msg %></small>
+                                                        <% } %>
+
+                                                            <input type="password" name="password2" placeholder="Confirmar contraseña">
+                                                            <% if (locals.errors && errors.password2) { %>
+                                                                <small class="text-validation"><%= errors.password2.msg %></small>
+                                                                <% } %>
+
+                                                                    <button>Regístrarse</button>
+                        </form>
+                    </div>
+                </div>
+
+            </main>
+            <%- include('../partials/footer')%>
+
+                <script src="/js/script-register.js"></script>
+    </body>
+
+    </html>
