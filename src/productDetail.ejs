@@ -1,0 +1,164 @@
+<%- include('./partials/head')%>
+
+
+    <body class="productDetail">
+
+        <!----------------------------------------------------->
+
+        <%- include('./partials/header')%>
+            <!------------------------------------------------------->
+
+            <a href="#" class="back-home-container">
+                <div class="back-home">
+                    <i class="fas fa-chevron-up"></i>
+
+                </div>
+            </a>
+
+
+            <!------------------------------------------------------->
+            <main class="mainDetalleProducto">
+                <section class="pantalla-dividida">
+
+                    <div class="container1">
+
+                        <ul class="fotoProducto">
+                            <li>
+                                <a href="#img1" class="foto">   <img src="/imagenes/<%=product.image[0]%>" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#img2" class="foto"><img src="/imagenes/<%=product.image[1]%>" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#img3" class="foto"><img src="/imagenes/<%=product.image[2]%>" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#img4" class="foto"><img src="/imagenes/<%=product.image[3]%>" alt=""></a>
+                            </li>
+                        </ul>
+
+
+                        <ul class="fotoMiniatura">
+                            <li id="img1" class="foto2">
+                                <img src="/imagenes/<%=product.image[0]%>" alt="">
+                            </li>
+                            <li id="img2" class="foto2">
+                                <img src="/imagenes/<%=product.image[1]%>" alt="">
+                            </li>
+                            <li id="img3" class="foto2">
+                                <img src="/imagenes/<%=product.image[2]%>" alt="">
+                            </li>
+                            <li id="img4" class="foto2">
+                                <img src="/imagenes/<%=product.image[3]%>" alt="">
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </section>
+                <!--------------agregar al carrito------------------->
+
+                <section class="pantalla-divida2">
+                    <div class="agregar-carrito-der">
+                        <div class="agregar-carrito">
+                            <h4 class="text-agr-car">
+                                <%-product.name%>
+                            </h4>
+
+                            <h4 class="text-agr-car">
+                                $
+                                <%-product.price%>
+                            </h4>
+
+                            <a class="text-agr-car" href="formas-de-pago">Ver los medios de pago</a>
+
+                            <button id="boton-detalle"><a class="boton-d" href="productCart">COMPRAR AHORA</a></button>
+
+                            <button id="boton-detalle"><a class="boton-d" href="">AGREGAR AL CARRITO</a></button>
+                            <h5 class="text-agr-car2">Garantía de la tienda: 1 mes</h5>
+                            <h5 class="text-agr-car2">Garantía de la fábrica: 12 meses</h5>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!------------Descripcion producto---------------->
+            <section class="detalle-producto1">
+                <div class="texto-detalle">
+                    <h4 class="destacado">Caracteristicas</h4>
+                    <ul>
+                        <li>Tipo de impresora: Multifunción</li>
+                        <li>Tipo de impresión: Color</li>
+                        <li>Con WI-Fi : Sí</li>
+                        <li>Tecnología de impresión: Inyección de tinta</li>
+                        <li>Funciones de la impresora: Impresión, Copia, Escaneo</li>
+                    </ul>
+                    <h4 class="destacado">Especificaciones</h4>
+                    <p class="p-destacado">Lo que tenés que saber de este producto</p>
+                    <p class="p-destacado">Imprime, escanea y hace copias.</p>
+                    <p class="p-destacado"> Tecnología de impresión: inyección de tinta.</p>
+                    <p class="p-destacado"> Tiene entrada USB.</p>
+                    <p class="p-destacado">Cuenta con 2 bandejas.</p>
+                    <p class="p-destacado">Capacidad máxima de 350 hojas.</p>
+                    <p class="p-destacado">Soporta papel tamaño 3.5 x 3.5", 4 x 4 ", 4 x 6 ", 5 x 5 ", 5 x 7 ", 7 x 10 ", 8 x 10 ", Carta 8.5 x 11 ", Legal 8.5 x 14 ", Sobre U.S. Núm. 10.</p>
+                    <p class="p-destacado">Incluye accesorios.</p>
+                    <p class="p-destacado">Práctica y funcional tanto para uso personal como profesional.</p>
+                </div>
+            </section>
+            <!-------------------hacer comentarios------------------------->
+            <section class="comentarios">
+                <div>
+                    <label id="comentarios1" for="mensaje">Comentarios</label>
+                </div>
+                <div class="textcomentario">
+                    <textarea name="mensaje" placeholder="Su mensaje aquí" id="mensaje" cols="40" rows="1"></textarea>
+                    <button class="botcomentario"><a class="comentarioletra" href="">Enviar</a></button>
+                </div>
+            </section>
+
+            <!------------------comentarios destacados------------------------>
+            <div class="seccioncomentarios">
+                <div class="comentariosuser">
+                    <img class="user" src="/imagenes/usuaria.svg" alt="">
+                    <p class="usercom">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="comentariosuser">
+                    <img class="user" src="/imagenes/usuario.svg" alt="">
+                    <p class="usercom">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="comentariosuser">
+                    <img class="user" src="/imagenes/usuaria.svg" alt="">
+                    <p class="usercom">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="comentariosuser">
+                    <img class="user" src="/imagenes/usuario.svg" alt="">
+                    <p class="usercom">Lorem ipsum dolor sit amet.</p>
+                </div>
+
+                <div class="comentariosuser">
+                    <img class="user" src="/imagenes/usuaria.svg" alt="">
+                    <p class="usercom">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="comentariosuser">
+                    <img class="user" src="/imagenes/usuario.svg" alt="">
+                    <p class="usercom">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+
+
+
+
+            <!------------------------------productos--------------------------------->
+            <section class="general-products " style="margin: 60px auto ;">
+                <%- include('partials/slider.ejs') %>
+
+            </section>
+            <!------------------------------------------------------->
+
+            <%- include('./partials/footer')%>
+
+    </body>
+    <script src="/js/product-slider.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    </html>
